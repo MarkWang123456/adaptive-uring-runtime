@@ -1,0 +1,6 @@
+#!/usr/bin/env bpftrace
+
+BEGIN
+{
+  printf("Tracing scheduler delay...\n");
+}

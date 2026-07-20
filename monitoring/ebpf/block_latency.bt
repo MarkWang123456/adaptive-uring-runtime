@@ -1,0 +1,6 @@
+#!/usr/bin/env bpftrace
+
+BEGIN
+{
+  printf("Tracing block I/O latency...\n");
+}

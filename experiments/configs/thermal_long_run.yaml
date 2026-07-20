@@ -1,0 +1,6 @@
+name: thermal_long_run
+backend: sqpoll
+queue_depth: 128
+enable_metrics: true
+workload: sustained_read_write
+duration_minutes: 60

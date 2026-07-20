@@ -1,0 +1,5 @@
+name: baseline_sqpoll
+backend: sqpoll
+queue_depth: 64
+enable_metrics: true
+workload: fio_random_read
