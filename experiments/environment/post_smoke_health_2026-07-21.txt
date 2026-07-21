@@ -1,0 +1,15 @@
+===== POST-SMOKE TIME =====
+2026-07-21T14:22:26+08:00
+
+===== LIBURING =====
+Package liburing was not found in the pkg-config search path.
+Perhaps you should add the directory containing `liburing.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'liburing', required by 'virtual:world', not found
+
+===== THERMAL =====
+temp=42.8'C
+frequency(48)=1800457088
+throttled=0x0
+
+===== USB / POWER ERRORS =====

@@ -1,0 +1,76 @@
+===== DATE =====
+2026-07-21T14:14:45+08:00
+
+===== OS =====
+PRETTY_NAME="Debian GNU/Linux 13 (trixie)"
+NAME="Debian GNU/Linux"
+VERSION_ID="13"
+VERSION="13 (trixie)"
+VERSION_CODENAME=trixie
+DEBIAN_VERSION_FULL=13.5
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+Linux Mark1008 6.18.34+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.18.34-1+rpt1 (2026-06-09) aarch64 GNU/Linux
+
+===== PI MODEL =====
+Raspberry Pi 4 Model B Rev 1.5
+
+===== ROOT =====
+/dev/mmcblk0p2 ext4 rw,noatime
+
+===== DEVICES =====
+NAME        MODEL    SERIAL             SIZE TRAN FSTYPE MOUNTPOINTS
+loop0                                     2G      swap   
+sda         PCIe1586 DD00000000000161 465.8G usb         
+└─sda1                                465.8G      ext4   /mnt/nvme
+mmcblk0              0x45130055          29G mmc         
+├─mmcblk0p1                             512M mmc  vfat   /boot/firmware
+└─mmcblk0p2                            28.5G mmc  ext4   /
+zram0                                     2G      swap   [SWAP]
+
+===== NVME =====
+TARGET    SOURCE    FSTYPE OPTIONS
+/mnt/nvme /dev/sda1 ext4   rw,noatime
+Filesystem     Type  Size  Used Avail Use% Mounted on
+/dev/sda1      ext4  458G  2.1M  435G   1% /mnt/nvme
+
+===== USB =====
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 001 Device 002: ID 2109:3431 VIA Labs, Inc. Hub
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 002 Device 002: ID 152d:0586 JMicron Technology Corp. / JMicron USA Technology Corp. M2-DC
+/:  Bus 001.Port 001: Dev 001, Class=root_hub, Driver=xhci_hcd/1p, 480M
+    |__ Port 001: Dev 002, If 0, Class=Hub, Driver=hub/4p, 480M
+/:  Bus 002.Port 001: Dev 001, Class=root_hub, Driver=xhci_hcd/4p, 5000M
+    |__ Port 001: Dev 002, If 0, Class=Mass Storage, Driver=uas, 5000M
+
+===== IO SCHEDULER =====
+none [mq-deadline] kyber bfq 
+
+===== CPU GOVERNOR =====
+ondemand
+
+===== CPU FREQUENCY =====
+600000
+1800000
+
+===== THERMAL =====
+temp=41.3'C
+frequency(48)=1800404352
+throttled=0x0
+
+===== SYSTEM TARGET =====
+multi-user.target
+
+===== TOOLS =====
+fio-3.39
+gcc (Debian 14.2.0-19) 14.2.0
+Python 3.13.5
+
+===== FSTAB =====
+proc            /proc           proc    defaults          0       0
+PARTUUID=50e1d8b7-01  /boot/firmware  vfat    defaults          0       2
+PARTUUID=50e1d8b7-02  /               ext4    defaults,noatime  0       1
+UUID=6c52d33b-fd8e-493c-8fd0-1ae951cc1a88 /mnt/nvme ext4 defaults,noatime,nofail,x-systemd.device-timeout=10s 0 2
