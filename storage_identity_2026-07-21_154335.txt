@@ -1,0 +1,150 @@
+===== DATE =====
+2026-07-21T15:43:35+08:00
+
+===== BLOCK DEVICE =====
+Partition: /dev/sda1
+Disk: /dev/sda
+NAME   MODEL    SERIAL            REV   SIZE TRAN FSTYPE MOUNTPOINTS
+sda    PCIe1586 DD00000000000161 0101 465.8G usb         
+└─sda1                                465.8G      ext4   /mnt/nvme
+
+===== USB DESCRIPTOR =====
+  idVendor           0x152d JMicron Technology Corp. / JMicron USA Technology Corp.
+  idProduct          0x0586 M2-DC
+  bcdDevice            1.01
+  iManufacturer           1 M2-DC
+  iProduct                2 M2-DC
+  iSerial                 3 DD00000000000161
+
+===== USB TOPOLOGY =====
+/:  Bus 001.Port 001: Dev 001, Class=root_hub, Driver=xhci_hcd/1p, 480M
+    |__ Port 001: Dev 002, If 0, Class=Hub, Driver=hub/4p, 480M
+/:  Bus 002.Port 001: Dev 001, Class=root_hub, Driver=xhci_hcd/4p, 5000M
+    |__ Port 001: Dev 002, If 0, Class=Mass Storage, Driver=uas, 5000M
+
+===== NVME THROUGH JMICRON =====
+smartctl 7.4 2023-08-01 r5530 [aarch64-linux-6.18.34+rpt-rpi-v8] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Number:                       CT500P310SSD8
+Serial Number:                      2532520E52C3
+Firmware Version:                   VACR001
+PCI Vendor/Subsystem ID:            0xc0a9
+IEEE OUI Identifier:                0x00a075
+Controller ID:                      0
+NVMe Version:                       2.0
+Number of Namespaces:               1
+Namespace 1 Size/Capacity:          500,107,862,016 [500 GB]
+Namespace 1 Formatted LBA Size:     512
+Namespace 1 IEEE EUI-64:            00a075 01520e52c3
+Local Time is:                      Tue Jul 21 15:43:35 2026 CST
+Firmware Updates (0x14):            2 Slots, no Reset required
+Optional Admin Commands (0x0017):   Security Format Frmw_DL Self_Test
+Optional NVM Commands (0x00d7):     Comp Wr_Unc DS_Mngmt Sav/Sel_Feat Timestmp Verify
+Log Page Attributes (0x3e):         Cmd_Eff_Lg Ext_Get_Lg Telmtry_Lg Pers_Ev_Lg Log0_FISE_MI
+Maximum Data Transfer Size:         64 Pages
+Warning  Comp. Temp. Threshold:     83 Celsius
+Critical Comp. Temp. Threshold:     85 Celsius
+Namespace 1 Features (0x18):        No_ID_Reuse NP_Fields
+
+Supported Power States
+St Op     Max   Active     Idle   RL RT WL WT  Ent_Lat  Ex_Lat
+ 0 +     6.10W       -        -    0  0  0  0        0       0
+ 1 +     3.00W       -        -    1  1  1  1        0       0
+ 2 +     1.50W       -        -    2  2  2  2        0       0
+ 3 -   0.0300W       -        -    3  3  3  3     1500    3500
+ 4 -   0.0025W       -        -    4  4  4  4     5000   35000
+
+Supported LBA Sizes (NSID 0x1)
+Id Fmt  Data  Metadt  Rel_Perf
+ 0 +     512       0         0
+
+=== START OF SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+SMART/Health Information (NVMe Log 0x02)
+Critical Warning:                   0x00
+Temperature:                        35 Celsius
+Available Spare:                    100%
+Available Spare Threshold:          5%
+Percentage Used:                    0%
+Data Units Read:                    224,507 [114 GB]
+Data Units Written:                 221,905 [113 GB]
+Host Read Commands:                 3,005,260
+Host Write Commands:                942,188
+Controller Busy Time:               4
+Power Cycles:                       12
+Power On Hours:                     57
+Unsafe Shutdowns:                   11
+Media and Data Integrity Errors:    0
+Error Information Log Entries:      0
+Warning  Comp. Temperature Time:    0
+Critical Comp. Temperature Time:    0
+Temperature Sensor 1:               35 Celsius
+
+Error Information (NVMe Log 0x01, 16 of 255 entries)
+No Errors Logged
+
+Self-test Log (NVMe Log 0x06)
+Self-test status: No self-test in progress
+No Self-tests Logged
+
+
+===== KERNEL DEVICE INFO =====
+P: /devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb2/2-1/2-1:1.0/host0/target0:0:0/0:0:0:0/block/sda
+M: sda
+J: b8:0
+U: block
+T: disk
+D: b 8:0
+N: sda
+L: 0
+S: disk/by-path/platform-fd500000.pcie-pci-0000:01:00.0-usb-0:1:1.0-scsi-0:0:0:0
+S: disk/by-id/usb-M2-DC_PCIe1586_DD00000000000161-0:0
+S: disk/by-path/platform-fd500000.pcie-pci-0000:01:00.0-usbv3-0:1:1.0-scsi-0:0:0:0
+S: disk/by-diskseq/28
+Q: 28
+E: DEVPATH=/devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb2/2-1/2-1:1.0/host0/target0:0:0/0:0:0:0/block/sda
+E: DEVNAME=/dev/sda
+E: DEVTYPE=disk
+E: DISKSEQ=28
+E: MAJOR=8
+E: MINOR=0
+E: SUBSYSTEM=block
+E: USEC_INITIALIZED=242557970
+E: ID_BUS=usb
+E: ID_MODEL=PCIe1586
+E: ID_MODEL_ENC=PCIe1586\x20\x20\x20\x20\x20\x20\x20\x20
+E: ID_MODEL_ID=0586
+E: ID_SERIAL=M2-DC_PCIe1586_DD00000000000161-0:0
+E: ID_SERIAL_SHORT=DD00000000000161
+E: ID_VENDOR=M2-DC
+E: ID_VENDOR_ENC=M2-DC\x20\x20\x20
+E: ID_VENDOR_ID=152d
+E: ID_REVISION=0101
+E: ID_TYPE=disk
+E: ID_INSTANCE=0:0
+E: ID_USB_MODEL=PCIe1586
+E: ID_USB_MODEL_ENC=PCIe1586\x20\x20\x20\x20\x20\x20\x20\x20
+E: ID_USB_MODEL_ID=0586
+E: ID_USB_SERIAL=M2-DC_PCIe1586_DD00000000000161-0:0
+E: ID_USB_SERIAL_SHORT=DD00000000000161
+E: ID_USB_VENDOR=M2-DC
+E: ID_USB_VENDOR_ENC=M2-DC\x20\x20\x20
+E: ID_USB_VENDOR_ID=152d
+E: ID_USB_REVISION=0101
+E: ID_USB_TYPE=disk
+E: ID_USB_INSTANCE=0:0
+E: ID_USB_INTERFACES=:080650:080662:
+E: ID_USB_INTERFACE_NUM=00
+E: ID_USB_DRIVER=uas
+E: ID_PATH_WITH_USB_REVISION=platform-fd500000.pcie-pci-0000:01:00.0-usbv3-0:1:1.0-scsi-0:0:0:0
+E: ID_PATH=platform-fd500000.pcie-pci-0000:01:00.0-usb-0:1:1.0-scsi-0:0:0:0
+E: ID_PATH_TAG=platform-fd500000_pcie-pci-0000_01_00_0-usb-0_1_1_0-scsi-0_0_0_0
+E: ID_PART_TABLE_UUID=41dd103f-0401-4323-b2f6-f0b7b80b1ac2
+E: ID_PART_TABLE_TYPE=gpt
+E: DEVLINKS=/dev/disk/by-path/platform-fd500000.pcie-pci-0000:01:00.0-usb-0:1:1.0-scsi-0:0:0:0 /dev/disk/by-id/usb-M2-DC_PCIe1586_DD00000000000161-0:0 /dev/disk/by-path/platform-fd500000.pcie-pci-0000:01:00.0-usbv3-0:1:1.0-scsi-0:0:0:0 /dev/disk/by-diskseq/28
+E: TAGS=:systemd:
+E: CURRENT_TAGS=:systemd:
+
